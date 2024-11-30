@@ -1,0 +1,15 @@
+.pro-btn{
+    transition: 0.3s ease-in-out;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.pro-btn:hover{
+  color: #22b8b1;
+}
+.back{
+    transition: 0.3s ease-in-out;
+    font-size: 30px;
+}
+.back:hover{
+    color: #22b8b1
+}
