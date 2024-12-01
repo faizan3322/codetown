@@ -18,7 +18,7 @@ export const Contact = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/submit-form", {
+      const response = await fetch("https://byte-catalyst-portfolio-website-9jni6upq7-byte-catalyst.vercel.app/api/submit-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
