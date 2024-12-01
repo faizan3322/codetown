@@ -18,7 +18,7 @@ export const Contact = () => {
     };
 
     try {
-      const response = await fetch("https://backend-gaqi6gbcj-byte-catalyst.vercel.app/api/submit-form", {
+      const response = await fetch("https://backend-eta-vert-18.vercel.app/api/submit-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
