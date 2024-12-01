@@ -1,54 +1,48 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
-// MongoDB URI
-const dbURI = 'mongodb+srv://kfaizanahmad35:NDeaIWWHYqJWnd3P@cluster0.0refn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-
-// Connect to MongoDB
-const connectDB = async () => {
-  if (mongoose.connection.readyState === 1) {
-    return;
+const connectToDatabase = async () => {
+  if (mongoose.connections[0].readyState) {
+    return; // Database is already connected
   }
-  await mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
+
+  await mongoose.connect(
+    'mongodb+srv://kfaizanahmad35:NDeaIWWHYqJWnd3P@cluster0.0refn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  );
 };
 
 // Define the schema for the form data
 const formSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true },
-  message: { type: String, required: true },
+  name: String,
+  email: String,
+  message: String,
 });
 
-// Create a model from the schema
-const FormData = mongoose.model('FormData', formSchema);
+const FormData = mongoose.models.FormData || mongoose.model('FormData', formSchema);
 
-export default async (req, res) => {
-  // Ensure the database is connected
-  await connectDB();
-
-  // Only accept POST requests
+export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      // Extract the data from the request body
+      // Connect to MongoDB
+      await connectToDatabase();
+
       const { name, email, message } = req.body;
 
-      // Create a new document using the data
+      // Save the form data to MongoDB
       const newFormData = new FormData({
         name,
         email,
         message,
       });
 
-      // Save the data to MongoDB
       await newFormData.save();
 
-      // Send a success response
       res.status(200).json({ message: 'Form submitted successfully!' });
-    } catch (err) {
-      console.error('Error saving data:', err);
-      res.status(500).json({ message: 'Error submitting form', error: err });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      res.status(500).json({ message: 'Error submitting form', error: error.message });
     }
   } else {
-    // Handle unsupported methods
     res.status(405).json({ message: 'Method Not Allowed' });
   }
-};
+}
