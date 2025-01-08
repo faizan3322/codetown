@@ -5,6 +5,8 @@ import { Hero } from './components/Hero'
 import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
 import { Contact } from './components/Contact'
+import Footer from './Footer'
+
 
 
 export default function Routing() {
@@ -15,6 +17,8 @@ export default function Routing() {
     <Projects />
     <Skills />
     <Contact />
+    <Footer />
+    
     
   </div>
   )

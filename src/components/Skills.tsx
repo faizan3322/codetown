@@ -1,23 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Database, Layout, Settings } from 'lucide-react';
+import { Code, Database, Layout, Settings } from 'lucide-react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faWordpress } from '@fortawesome/free-brands-svg-icons';
 
 const skills = [
   {
-    category: 'Frontend',
-    icon: <Layout />,
-    items: ['React.js', 'TypeScript', 'Tailwind CSS', 'Bootstrap']
+    category: 'Wordpress',
+    icon: <FontAwesomeIcon icon={faWordpress} size='2x' />,
+    items: ["We provide top-notch WordPress development services tailored to meet your unique needs. Whether you're looking to build a stunning portfolio, a business website, or an e-commerce platform, our team specializes in creating professional, responsive, and user-friendly WordPress websites."]
   },
   {
-    category: 'Backend',
-    icon: <Database />,
-    items: ['Node.js', 'Python', 'MongoDB', 'Express.js']
+    category: 'Web Development',
+    icon: <Code />,
+    items: ["We provide Responsive and attractive web development services whether you're looking to specialize in crafting visually stunning and highly functional websites using HTML, CSS, JavaScript, and React projects. Our team is dedicated to creating custom web solutions that align perfectly with your goals."]
   },
   {
-    category: 'Services',
-    icon: <Settings />,
-    items: ['MERN stack Development', 'Wordpress', 'SEO', 'Web ReDesign']
-  }
+    category: 'Web Development',
+    icon: <Code />,
+    items: ["We provide Responsive and attractive web development services whether you're looking to specialize in crafting visually stunning and highly functional websites using HTML, CSS, JavaScript, and React projects. Our team is dedicated to creating custom web solutions that align perfectly with your goals."]
+  },
+  {
+    category: 'Web Development',
+    icon: <Code />,
+    items: ["We provide Responsive and attractive web development services whether you're looking to specialize in crafting visually stunning and highly functional websites using HTML, CSS, JavaScript, and React projects. Our team is dedicated to creating custom web solutions that align perfectly with your goals."]
+  },
+  {
+    category: 'Web Development',
+    icon: <Code />,
+    items: ["We provide Responsive and attractive web development services whether you're looking to specialize in crafting visually stunning and highly functional websites using HTML, CSS, JavaScript, and React projects. Our team is dedicated to creating custom web solutions that align perfectly with your goals."]
+  },
+  {
+    category: 'Web Development',
+    icon: <Code />,
+    items: ["HTML", "CSS", "Javascript", "React.JS"]
+  },
+  
 ];
 
 export const Skills = () => {
@@ -32,8 +51,8 @@ export const Skills = () => {
         >
           Skills & Services
         </motion.h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div className="grid grid-cols-1 md:grid-cols-3  gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.category}
@@ -41,13 +60,13 @@ export const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="bg-gray-700 p-6 rounded-lg"
+              className="bg-gray-700 p-6 rounded-lg "
             >
               <div className="flex items-center mb-4">
                 <span className="text-cyan-400 mr-3">{skill.icon}</span>
                 <h3 className="text-xl font-semibold text-white">{skill.category}</h3>
               </div>
-              
+
               <ul className="space-y-2">
                 {skill.items.map((item) => (
                   <motion.li
@@ -55,7 +74,7 @@ export const Skills = () => {
                     className="text-gray-300"
                     whileHover={{ x: 5 }}
                   >
-                    {item}
+                    <ul><li>{item}</li></ul>
                   </motion.li>
                 ))}
               </ul>

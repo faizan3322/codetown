@@ -27,25 +27,11 @@ const projects = [
       description: 'A modern e-commerce platform built with React and Node.js',
       image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
       
-      live: 'https://faizan3322.github.io/Ecommerce/',
+      live: 'https://ecommerce-eta-seven-27.vercel.app/',
       tags: ['Javascript', 'Node.js', 'Css']
     },
-    {
-      title: 'Medical Login System',
-      description: 'Medical Login System Based on Vanilla Javascript, HTML, CSS',
-      image: 'https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23724_16812965322203423.jpg',
-      
-      live: 'dayansalman404.pythonanywhere.com',
-      tags: ['Javascript', 'Python', 'Css']
-    },
-    {
-      title: 'Duct Cleaning',
-      description: 'Duct Cleaning Website for US based Client build on React.JS',
-      image: 'https://img1.wsimg.com/isteam/stock/1360/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1447,h:1000,cg:true',
-      github: 'https://github.com',
-      live: 'https://eliteducts.com/',
-      tags: ['React', 'Tailwind']
-    },
+   
+    
     {
       title: 'Global Cyber Security Speaker',
       description: 'Portfolio Website of a Cyber Security Speaker Build On Wordpress',
@@ -59,7 +45,7 @@ const projects = [
       description: 'Real-time weather tracking with interactive maps',
       image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80',
       github: 'https://github.com',
-      live: 'https://faizan-weather-website.netlify.app',
+      live: 'https://weather-website-iota-drab.vercel.app/',
       tags: ['TypeScript', 'React', 'OpenWeather API']
     },
     {
@@ -67,7 +53,7 @@ const projects = [
       description: 'Real-time weather tracking with interactive maps',
       image: 'https://indieground.net/wp-content/uploads/2023/03/Freebie-GradientTextures-Preview-06.jpg',
       github: 'https://github.com',
-      live: 'https://faizan-weather-website.netlify.app',
+      live: 'https://gradient-generator-virid.vercel.app/',
       tags: ['Vanila Javascript', 'HTML']
     },
     {
@@ -76,7 +62,7 @@ const projects = [
       image: 'https://www.arzaan.pk/cdn/shop/articles/online-shopping-in-Pakistan.jpg?v=1633035087',
       github: 'https://github.com',
       live: 'https://fabulous-paprenjak-f4e2a4.netlify.app/',
-      tags: ['TypeScript', 'React', 'penWeather API']
+      tags: ['TypeScript', 'React', 'Weather API']
     },
   
   ];

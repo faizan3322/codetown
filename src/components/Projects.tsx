@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink,  } from 'lucide-react';
 import './Projects.css'
 import { Link } from 'react-router-dom';
 
@@ -22,13 +22,13 @@ const projects = [
     tags: ['Wordpress']
   },
   {
-    title: 'Weather Dashboard',
-    description: 'Real-time weather tracking with interactive maps',
-    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80',
-    github: 'https://github.com',
-    live: 'https://faizan-weather-website.netlify.app',
-    tags: ['TypeScript', 'React', 'OpenWeather API']
-  }
+    title: 'E-Commerce Platform',
+    description: 'A modern e-commerce platform built with React and Node.js',
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
+    
+    live: 'https://ecommerce-eta-seven-27.vercel.app/',
+    tags: ['Javascript', 'Node.js', 'Css']
+  },
 ];
 
 export const Projects = () => {
@@ -91,7 +91,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => (
           whileTap={{ scale: 0.95 }}
           className="text-gray-300 hover:text-cyan-400"
         >
-          <Github size={20} />
+          
         </motion.a>
         <motion.a
           href={project.live}
