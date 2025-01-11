@@ -5,9 +5,9 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 text-white px-4">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 text-white px-4" style={{marginBottom:"-90px"}}>
       <div className="max-w-4xl mx-auto text-center">
-        <img src="Code_towns_hero.png" width={'450px'} className='mb-9'/>
+        <img src="/src/Idea To Leads Coloured & Light.png" width={'350px'} className='mb-9'/>
         {/* <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export const Hero = () => {
         >
           
           <SocialLink href="https://linkedin.com" icon={<Linkedin />} />
-          <SocialLink href="mailto:alex@example.com" icon={<Mail />} />
+          <SocialLink href="mailto:ideatolead@gmail.com" icon={<Mail />} />
         </motion.div>
       </div>
     </section>

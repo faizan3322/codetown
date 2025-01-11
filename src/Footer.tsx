@@ -1,39 +1,35 @@
-import React from 'react'
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import React from 'react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 
-export default function Footer() {
+export function Footer() {
   return (
-    <div>
-        <div className="max-w-7xl mx-auto text-center">
-        <img src="Code_towns_hero.png" width={'150px'} className='mt-5 '/>
-        
-        
-        {/* <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex justify-center space-x-6 mb-10"
-        >
+    <footer className="bg-gray-800 text-white py-12">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-8 md:mb-0">
+            <img src="/src/Idea To Leads Coloured & Light.png" width={'150px'} alt="" />
+            
+          </div>
           
-          <SocialLink href="https://linkedin.com" icon={<Linkedin />} />
-          <SocialLink href="mailto:alex@example.com" icon={<Mail />} />
-        </motion.div>
-        <hr className='mb-9'></hr> */}
-        <p style={{color:'#22d3ee',letterSpacing:'3px'}} className='mb-5'>© 2025 Code Towns. All Rights Reserved</p>
+          <div className="flex space-x-6">
+           
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-indigo-400 transition-colors"
+            >
+              <Linkedin size={24} />
+            </a>
+            
+          </div>
+        </div>
+        
+        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+          <p>&copy; {new Date().getFullYear()} Idea To lead. All rights reserved.</p>
+        </div>
       </div>
-    </div>
-  )
-}
-const SocialLink = ({ href, icon }: { href: string; icon: React.ReactNode }) => (
-    <motion.a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      className="text-gray-300 hover:text-cyan-400 transition-colors"
-    >
-      {icon}
-    </motion.a>
+    </footer>
   );
+}
+export default Footer;

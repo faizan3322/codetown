@@ -1,50 +1,31 @@
-import { useState } from 'react';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Linkedin } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Globe, Code2, Megaphone, Search, Share2, ArrowRight, Phone, Mail, Linkedin, Twitter, Instagram, Facebook, Clock, Award, Users } from 'lucide-react';
 
 
 export const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const formData = {
-      name,
-      email,
-      message,
-    };
-
-    try {
-      const response = await fetch("https://backend-j9pv591e7-byte-catalyst.vercel.app", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert("Form submitted successfully!");
-        setName(""); // Clear the form fields after successful submission
-        setEmail("");
-        setMessage("");
-      } else {
-        const errorData = await response.json();
-        alert("Error: " + errorData.message);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
       }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Error submitting form.");
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
     }
   };
 
   return (
-    <section className="py-20 px-4 bg-gray-800">
-      <div className="max-w-4xl mx-auto">
+    <section id='contact' className="py-20 px-4 bg-gray-900">
+      {/* <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,13 +48,13 @@ export const Contact = () => {
               <a href='mailto:codetowns@gmail.com'>
               <Mail className="text-cyan-400 " />
               </a>
-              <span className='text-2xl' style={{ letterSpacing: '2px' }}>codetowns@gmail.com</span>
+              <span className='text-2xl' style={{ letterSpacing: '2px' }}>ideatolead@gmail.com</span>
               
             </div>
             <div className="flex items-center space-x-4 text-gray-300">
               
               <Phone className="text-cyan-400 " />
-              <span className='text-2xl' style={{ letterSpacing: '2px' }}>+1(214)8964872</span>
+              <span className='text-2xl' style={{ letterSpacing: '2px' }}>(214) 896-4872</span>
             </div>
             <div className="flex items-center space-x-4 text-gray-300">
               
@@ -93,13 +74,100 @@ export const Contact = () => {
             >
 
               <SocialLink href="https://linkedin.com" icon={<Linkedin />} />
-              <SocialLink href="mailto:codetowns@gmail.com" icon={<Mail />} />
+              <SocialLink href="mailto:ideatolead@gmail.com" icon={<Mail />} />
               
               
             </motion.div>
          
         </div>
-      </div>
+      </div> */}
+      {/* Contact Section */}
+      <motion.div
+          className=""
+          variants={containerVariants}
+        >
+          <motion.h2 
+            className="text-4xl font-bold text-center mb-16  text-white  bg-clip-text"
+            variants={itemVariants}
+          >
+            Get in Touch
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Left side (Contact Information) */}
+            <motion.div
+              variants={itemVariants}
+              className="space-y-8"
+            >
+              <div className="bg-white/5 backdrop-blur-lg p-8 rounded-xl border border-white/10">
+                <h3 className="text-2xl text-white font-semibold mb-6">Contact Information</h3>
+                
+                <div className="space-y-6">
+                  <motion.div 
+                    className="flex items-center space-x-4"
+                    whileHover={{ x: 10 }}
+                  >
+                    <div className="bg-gradient-to-br from-blue-500 to-green-500 p-3 rounded-lg">
+                      <Phone className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-white">Phone</p>
+                      <p className="text-blue-200 ">+1 (214) 896-4872</p>
+                    </div>
+                  </motion.div>
+
+                  <motion.div 
+                    className="flex items-center space-x-4"
+                    whileHover={{ x: 10 }}
+                  >
+                    <div className="bg-gradient-to-br from-blue-500 to-green-500 p-3 rounded-lg">
+                      <Mail className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-white">Email</p>
+                      <p className="text-blue-200">ideatolead@gmail.com</p>
+                    </div>
+                  </motion.div>
+
+                  <div className="pt-6">
+                    <p className="font-medium mb-4 text-white">Contact Us</p>
+                    <div className="flex space-x-4">
+                      <motion.a
+                        href="#"
+                        className="bg-gradient-to-br from-blue-500 to-green-500 p-3 rounded-lg"
+                        whileHover={{ y: -5 }}
+                      >
+                        <Linkedin className="w-5 h-5" />
+                      </motion.a>
+                      <motion.a
+                        href="mailto:ideatolead@gmail.com"
+                        className="bg-gradient-to-br from-blue-500 to-green-500 p-3 rounded-lg"
+                        whileHover={{ y: -5 }}
+                      >
+                        <Mail className="w-5 h-5" />
+                      </motion.a>
+                     
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right side (Company Information) */}
+            <motion.div
+              variants={itemVariants}
+              className="space-y-8 flex justify-center align-center "
+            >
+              <img src="/src/Idea To Leads Coloured & Light.png" width={"350px"}  alt="" />
+
+              
+            </motion.div>
+          </div>
+        </motion.div>
+
+        
+        
     </section>
   );
 };

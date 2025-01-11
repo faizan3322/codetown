@@ -6,13 +6,15 @@ import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
 import { Contact } from './components/Contact'
 import Footer from './Footer'
+import { Header } from './components/Header'
 
 
 
 export default function Routing() {
     
   return (
-    <div className="bg-gray-900">
+    <div className="min-h-screen bg-gray-900">
+    <Header />
     <Hero />
     <Projects />
     <Skills />
