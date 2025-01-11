@@ -159,7 +159,7 @@ export const Contact = () => {
               variants={itemVariants}
               className="space-y-8 flex justify-center align-center "
             >
-              <img src="/src/Idea To Leads Coloured & Light.png" width={"350px"}  alt="" />
+              <img src="Idea To Leads Coloured & Light.png" width={"450px"}  alt="" />
 
               
             </motion.div>

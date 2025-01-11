@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
-            <img src="/src/Idea To Leads Coloured & Light.png" width={'150px'} alt="" />
+            <img src="Idea To Leads Coloured & Light.png" width={'150px'} alt="" />
             
           </div>
           
