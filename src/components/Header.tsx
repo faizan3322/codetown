@@ -36,10 +36,10 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-4">
-              <a href="#about" className="text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>About</a>
-              <a href="#projects" className="text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Projects</a>
-              <a href="#skills" className="text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Skills</a>
-              <a href="#contact" className="text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Contact</a>
+             
+              <a href="#projects" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Projects</a>
+              <a href="#skills" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Skills</a>
+              <a href="#contact" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Contact</a>
             </div>
           </div>
         )}

@@ -157,9 +157,9 @@ export const Contact = () => {
             {/* Right side (Company Information) */}
             <motion.div
               variants={itemVariants}
-              className="space-y-8 flex justify-center align-center "
+              className="hidden md:flex space-y-8 justify-center items-center"
             >
-              <img src="Idea To Leads Coloured & Light.png" width={"450px"}  alt="" />
+              <img src="Idea To Leads Coloured & Light.png" height={"20px"} style={{height:"100px"}} alt="logo" />
 
               
             </motion.div>
