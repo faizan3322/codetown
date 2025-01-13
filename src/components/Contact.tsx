@@ -108,7 +108,7 @@ export const Contact = () => {
                     whileHover={{ x: 10 }}
                   >
                     <div className="bg-gradient-to-br from-blue-500 to-green-500 p-3 rounded-lg">
-                      <Phone className="w-6 h-6" />
+                      <a href="sms:+12148964872"><Phone className="w-6 h-6" /></a>
                     </div>
                     <div>
                       <p className="font-medium text-white">Phone</p>
@@ -121,7 +121,7 @@ export const Contact = () => {
                     whileHover={{ x: 10 }}
                   >
                     <div className="bg-gradient-to-br from-blue-500 to-green-500 p-3 rounded-lg">
-                      <Mail className="w-6 h-6" />
+                    <a href="mailto:ideatolead@gmail.com"><Mail className="w-6 h-6" /></a>  
                     </div>
                     <div>
                       <p className="font-medium text-white">Email</p>
