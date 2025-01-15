@@ -7,6 +7,7 @@ import { Skills } from './components/Skills'
 import { Contact } from './components/Contact'
 import Footer from './Footer'
 import { Header } from './components/Header'
+import PrivacyPolicy from './components/PrivacyPolicy'
 
 
 
@@ -20,6 +21,7 @@ export default function Routing() {
     <Skills />
     <Contact />
     <Footer />
+    
     
     
   </div>

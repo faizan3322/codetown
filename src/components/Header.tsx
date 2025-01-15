@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -17,10 +18,11 @@ export function Header() {
             <a href="#projects" className="text-white-600 text-lg font-bold hover:text-cyan-500 transition-colors">Projects</a>
             <a href="#skills" className="text-white-600 text-lg font-bold hover:text-cyan-500 transition-colors">Skills</a>
             <a href="#contact" className="text-white-600 text-lg font-bold hover:text-cyan-500 transition-colors">Contact</a>
+            <Link  to="/Privacy-Policy" className="text-white-600 text-lg font-bold hover:text-cyan-500 transition-colors">Privacy Policy</Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-cyan-200 hover:text-cyan-600">
+            <a href="mailto:ideatolead@gmail.com" target="_blank" rel="noopener noreferrer" className="text-cyan-200 hover:text-cyan-600">
               <Mail size={20} />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-cyan-200 hover:text-cyan-600">
@@ -40,6 +42,7 @@ export function Header() {
               <a href="#projects" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Projects</a>
               <a href="#skills" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Skills</a>
               <a href="#contact" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Contact</a>
+              <a href="#privacy" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Privacy Policy</a>
             </div>
           </div>
         )}

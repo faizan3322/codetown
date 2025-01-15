@@ -3,6 +3,7 @@ import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
 import Allprojects from './components/Allprojects';
 import Routing from './Routing';
 import ServicePage from './components/ServicePage';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 
 
@@ -21,6 +22,11 @@ function App() {
         {
           path:'/service/:id',
           element: <ServicePage />
+        },
+    
+        {
+          path:'/Privacy-Policy',
+          element: <PrivacyPolicy />
         }
     ]
 )

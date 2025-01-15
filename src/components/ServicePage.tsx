@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Check, Globe, Code2, Megaphone, Search, Share2 } from 'lucide-react';
+import './ServicePage.css'
 
 const servicesData = [
   { 
@@ -57,11 +58,12 @@ const servicesData = [
     fullDescription: "Our SEO services focus on improving your website's visibility in search engine results through proven techniques and strategies. We conduct thorough analysis and implement both on-page and off-page optimization.",
     features: [
       "Keyword Research & Analysis",
-      "On-Page Optimization",
+      "On-Page SEO",
+      "Off-Page SEO",
       "Technical SEO",
+      "Local SEO",
       "Content Strategy",
-      "Link Building",
-      "Local SEO"
+      "Link Building"
     ]
   },
   { 
@@ -88,7 +90,7 @@ function ServicePage() {
 
   if (!service) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 to-indigo-900 text-white flex items-center justify-center">
+      <div className=" min-h-screen bg-gradient-to-br from-blue-900 to-indigo-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
           <motion.button
@@ -104,7 +106,7 @@ function ServicePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="bg-img min-h-screen bg-gray-900 text-white">
       <motion.div 
         className="max-w-7xl mx-auto px-4 py-20"
         initial={{ opacity: 0, y: 20 }}
@@ -127,7 +129,7 @@ function ServicePage() {
           >
             <div className="bg-white/5 backdrop-blur-lg p-8 rounded-xl border border-white/10">
               <motion.div 
-                className="bg-cyan-500 w-20 h-20 rounded-lg flex items-center justify-center mb-6"
+                className=" bg-cyan-500 w-20 h-20 rounded-lg flex items-center justify-center mb-6"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 1 }}
               >
