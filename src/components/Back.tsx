@@ -8,7 +8,7 @@ import './Projects.css'
 export default function Back() {
   return (
     <div>
-        <Link to='/' className='back'> <FontAwesomeIcon  icon={faArrowLeft} /> Back To Home</Link> 
+        <Link to='/' className='back'> <FontAwesomeIcon  icon={faArrowLeft} /> </Link> 
     </div>
   )
 }

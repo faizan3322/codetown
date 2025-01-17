@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 text-white px-4" style={{marginBottom:"-90px"}}>
+    <section id='hero' className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 text-white px-4" style={{marginBottom:"-90px"}}>
       <div className="max-w-4xl mx-auto text-center">
         <img src="Idea To Leads Coloured & Light.png" width={'350px'} className='mb-9'/>
         {/* <motion.h1 
@@ -33,7 +33,7 @@ export const Hero = () => {
           className="flex justify-center space-x-6"
         >
           
-          <SocialLink href="https://linkedin.com" icon={<Linkedin />} />
+          <SocialLink href="https://www.linkedin.com/company/idea-to-lead" icon={<Linkedin />} />
           <SocialLink href="mailto:ideatolead@gmail.com" icon={<Mail />} />
         </motion.div>
       </div>

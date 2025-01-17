@@ -9,7 +9,7 @@ export function Header() {
     <header className="fixed w-full bg-cyan-800/80 backdrop-blur-sm z-50 shadow-sm">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-2xl font-bold text-gray-800">
+          <a href="#hero" className="text-2xl font-bold text-gray-800">
             Portfolio
           </a>
           
@@ -25,7 +25,7 @@ export function Header() {
             <a href="mailto:ideatolead@gmail.com" target="_blank" rel="noopener noreferrer" className="text-cyan-200 hover:text-cyan-600">
               <Mail size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-cyan-200 hover:text-cyan-600">
+            <a href="https://www.linkedin.com/company/idea-to-lead" target="_blank" rel="noopener noreferrer" className="text-cyan-200 hover:text-cyan-600">
               <Linkedin size={20} />
             </a>
           </div>

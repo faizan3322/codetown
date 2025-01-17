@@ -13,7 +13,6 @@ const servicesData = [
     fullDescription: "Our WordPress development services provide end-to-end solutions for businesses of all sizes. From custom theme development to plugin integration and e-commerce solutions, we ensure your WordPress site stands out and performs optimally.",
     features: [
       "Custom Theme Development",
-      "Plugin Development & Integration",
       "WooCommerce Solutions",
       "Performance Optimization",
       "Security Implementation",
@@ -30,8 +29,6 @@ const servicesData = [
       "Custom Web Applications",
       "Responsive Design",
       "Frontend Development",
-      "Backend Development",
-      "API Integration",
       "Performance Optimization"
     ]
   },

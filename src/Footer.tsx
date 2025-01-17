@@ -14,7 +14,7 @@ export function Footer() {
           <div className="flex space-x-6">
            
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/idea-to-lead"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-indigo-400 transition-colors"

@@ -133,7 +133,7 @@ export const Contact = () => {
                     <p className="font-medium mb-4 text-white">Contact Us</p>
                     <div className="flex space-x-4">
                       <motion.a
-                        href="#"
+                        href="https://www.linkedin.com/company/idea-to-lead"
                         className="bg-gradient-to-br from-blue-500 to-green-500 p-3 rounded-lg"
                         whileHover={{ y: -5 }}
                       >
