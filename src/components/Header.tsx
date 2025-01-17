@@ -42,7 +42,7 @@ export function Header() {
               <a href="#projects" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Projects</a>
               <a href="#skills" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Skills</a>
               <a href="#contact" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Contact</a>
-              <a href="#privacy" className="text-white-600 text-lg font-bold hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Privacy Policy</a>
+              <Link  to="/Privacy-Policy" className="text-white-600 text-lg font-bold hover:text-cyan-500 transition-colors">Privacy Policy</Link>
             </div>
           </div>
         )}
