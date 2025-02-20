@@ -8,6 +8,7 @@ import { Contact } from './components/Contact'
 import Footer from './Footer'
 import { Header } from './components/Header'
 import PrivacyPolicy from './components/PrivacyPolicy'
+import Form from './components/Form'
 
 
 
@@ -21,6 +22,7 @@ export default function Routing() {
     <Skills />
     <Contact />
     <Footer />
+    <Form/>
     
     
     
