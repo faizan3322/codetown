@@ -43,11 +43,12 @@ export default function Form() {
         }
 
         try {
-            const response = await fetch("http://127.0.0.1:5000/submit-form", {
+            const response = await fetch("https://ideabackend-mnze.onrender.com/submit-form", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
+            
 
             if (response.ok) {
                 setSuccessMessage("Message sent successfully!");
